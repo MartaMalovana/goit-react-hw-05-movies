@@ -17,3 +17,11 @@ export function fetchKeyWordSearchMovie(movie) {
 export function fetchMovieIdSearch(movieId) {
     return fetchWithErrorHandling(`${BASE_URL}/movie/${movieId}?api_key=${myKey}`);
 }
+
+export function fetchMovieCast(movieId) {
+    return fetchWithErrorHandling(`${BASE_URL}/movie/${movieId}/credits?api_key=${myKey}`);
+}
+
+export function fetchMovieReviews(movieId) {
+    return fetchWithErrorHandling(`${BASE_URL}/movie/${movieId}/reviews?api_key=${myKey}`);
+}
