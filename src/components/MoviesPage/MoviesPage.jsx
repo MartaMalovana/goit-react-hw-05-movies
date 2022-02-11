@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { useRouteMatch } from 'react-router-dom';
 import {fetchKeyWordSearchMovie} from '../../services/moviesApi';
 import MoviesList from "../MoviesList/MoviesList";
@@ -24,7 +24,7 @@ export default function MoviesPage () {
             <label>
                 <input name="keyword" onChange={e => setKeyword(e.target.value)}/>
             </label>
-            <button type="button">Search</button>
+            <button type="button" onClick={searchMovie}>Search</button>
         </form>
         <MoviesList results={movies} url={url}/>
         </>

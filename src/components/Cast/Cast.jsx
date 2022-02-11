@@ -1,6 +1,7 @@
 import {useState, useEffect} from 'react';
 import { useParams } from "react-router-dom";
 import {fetchMovieCast} from "../../services/moviesApi";
+import default_photo from '../../images/default_photo.jpg';
 
 export default function Cast () {
     const [cast, setCast] = useState([]);
@@ -13,10 +14,11 @@ export default function Cast () {
 
     return (<ul>
             {cast && cast.map(el => 
-                (<li>
+                (<li key={el.name}>
                     <p>{el.name}</p>
-                    <p>{el.character}</p>
-                    <img src={`https://image.tmdb.org/t/p/original/${el.profile_path}`} alt={el.name} width="100px"></img>
+                    <p>{'Character: ' + el.character}</p>
+                    <img src={el.profile_path ? `https://image.tmdb.org/t/p/original/${el.profile_path}` : default_photo} alt={el.name} width="100px"></img>
                 </li>))}
             </ul>)
 }
+

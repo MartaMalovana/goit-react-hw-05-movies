@@ -17,6 +17,6 @@ export default function HomePage () {
     }, []);
 
     return (
-        <MoviesList results={results} url={`${url}movies`}/>
+        <MoviesList results={results} url={`${url}movies`} />
     );
 };

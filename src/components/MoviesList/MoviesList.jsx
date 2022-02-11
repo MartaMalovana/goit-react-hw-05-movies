@@ -1,7 +1,7 @@
 import {Link} from 'react-router-dom';
+import PropTypes from 'prop-types';
 
 export default function MoviesList ({results, url}) {
-
   return (
       <>
       <h2>Trending today</h2>
@@ -13,5 +13,10 @@ export default function MoviesList ({results, url}) {
         ))}
       </ul>
       </>
-    );
+  );
+}
+
+MoviesList.propTypes ={
+  results: PropTypes.array,
+  url: PropTypes.string
 }
