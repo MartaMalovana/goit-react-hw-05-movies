@@ -2,6 +2,7 @@ import { useState } from "react";
 import { useRouteMatch } from 'react-router-dom';
 import {fetchKeyWordSearchMovie} from '../../services/moviesApi';
 import MoviesList from "../MoviesList/MoviesList";
+import {Form, Button} from "./MoviesPage.styled";
 
 export default function MoviesPage () {
 
@@ -20,12 +21,12 @@ export default function MoviesPage () {
 
     return (
         <>
-        <form onSubmit={searchMovie}>
+        <Form onSubmit={searchMovie}>
             <label>
                 <input name="keyword" onChange={e => setKeyword(e.target.value)}/>
             </label>
-            <button type="button" onClick={searchMovie}>Search</button>
-        </form>
+            <Button type="button" onClick={searchMovie}>Search</Button>
+        </Form>
         <MoviesList results={movies} url={url}/>
         </>
     );

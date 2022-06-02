@@ -2,6 +2,7 @@ import styled from "@emotion/styled";
 
 export const MovieInfo = styled.div`
     display: flex;
+    margin-left: 20px;
 `;
 
 export const Image = styled.img`
@@ -27,4 +28,10 @@ export const Genre = styled.span`
 export const BackButton = styled.div`
     display: flex;
     align-items: center;
+    margin-left: 20px;
+    margin-top: 10px;
+`;
+
+export const Title = styled.p`
+    margin-left: 20px;
 `;

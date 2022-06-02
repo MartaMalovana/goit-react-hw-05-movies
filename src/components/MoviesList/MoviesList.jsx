@@ -1,10 +1,11 @@
 import {Link} from 'react-router-dom';
 import PropTypes from 'prop-types';
+import {Title} from './Movies.styled';
 
 export default function MoviesList ({results, url}) {
   return (
       <>
-      <h2>Trending today</h2>
+      <Title>Trending movies today</Title>
       <ul>
         {results && results.map(result => (
           <li key={result.id}>

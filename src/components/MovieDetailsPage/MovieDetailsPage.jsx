@@ -3,7 +3,7 @@ import { useParams, NavLink, useRouteMatch, Route, useHistory } from "react-rout
 import { ThreeDots } from  'react-loader-spinner';
 import {BsArrowLeft} from "react-icons/bs";
 import {fetchMovieIdSearch} from '../../services/moviesApi';
-import {MovieInfo, Image, MovieBlock, AdditionalInfo, Genre, BackButton} from './MovieDetailsPage.styled';
+import {MovieInfo, Image, MovieBlock, AdditionalInfo, Genre, BackButton, Title} from './MovieDetailsPage.styled';
 
 const Cast = lazy(() => import('../Cast/Cast') /* webpackChunkName: "Cast" */);
 const Reviews = lazy(() => import('../Reviews/Reviews') /* webpackChunkName: "Reviews" */);
@@ -53,7 +53,7 @@ export default function MovieDetailsPage () {
             </MovieBlock>
             
             <AdditionalInfo>
-                <p>Additional information</p>
+                <Title>Additional information</Title>
                 <ul>
                     <li><NavLink to={`${url}/cast`}><p>Cast</p></NavLink></li>
                     <li><NavLink to={`${url}/reviews`}><p>Reviews</p></NavLink></li>
